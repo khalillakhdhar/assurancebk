@@ -4,27 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.example.entity.UserInfo;
-import com.example.service.UserInfoService;
+import com.example.entity.User;
+import com.example.entity.Adresse;
+import com.example.entity.Genre;
+import com.example.entity.Role;
+import com.example.service.UserService;
 
 @SpringBootApplication
-public class SpringSecurityApplication implements CommandLineRunner {
+public class SpringSecurityApplication  {
 
-	
-	@Autowired
-	UserInfoService userInfoService; 
-	
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityApplication.class, args);
-	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		UserInfo userInfo=new UserInfo(1,"khalil","khalil@gmail.com", "ADMIN_ROLES,USER_ROLES", "azerty");
-		userInfoService.addUser(userInfo);
-		
-	}
 
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityApplication.class, args);
+    }
+
+   
 }
